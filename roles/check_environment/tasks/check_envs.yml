@@ -1,0 +1,6 @@
+---
+- name: Environment is ok
+  debug:
+    msg: "All environment checked sacessfully."
+  register: was_environment_ok
+...

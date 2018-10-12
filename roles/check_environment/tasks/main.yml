@@ -1,7 +1,5 @@
 ---
-# tasks for check variables
-- name: Debug
-  debug:
-    msg: "We are here"
-  register: was_environment_ok
+# tasks for check environment
+- name: Check environment
+  include_tasks: check_envs.yml
 ...
