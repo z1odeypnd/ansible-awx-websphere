@@ -3,7 +3,8 @@
   unarchive:
     src: "{{ lookup('fileglob', './files/{{ was.distrib_name }}.tar.gz') }}"
     dest: "{{ was.tmp_dir }}/"
-    copy: no
+#    copy: no
+    
 - name: Generate WAS response file
   template:
     src: "was_response_file.j2"
