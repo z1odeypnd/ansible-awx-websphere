@@ -4,7 +4,7 @@
   become: yes
   become_user: root
   roles:
-    - check_vars
-#    - check_envoronment
-    - install_was
+    - { role: check_vars }
+    - { role: check_envoronment, when: "was_vars_ok is defined" }
+    - { role: install_was, when: "was_environment_ok is defined" }
 ...
