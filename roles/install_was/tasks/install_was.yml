@@ -1,8 +1,8 @@
 ---
 - name: Extract WAS files into "{{ was.tmp_dir }}"
   unarchive:
-    src: "{{ lookup('fileglob', './files/{{ was.distrib_name }}*.tar.gz') }}"
-    dest: "{{ was.tmp_dir }}"
+    src: "{{ lookup('fileglob', './files/{{ was.distrib_name }}.tar.gz') }}"
+    dest: "{{ was.tmp_dir }}/"
     copy: no
 - name: Generate WAS response file
   template:
