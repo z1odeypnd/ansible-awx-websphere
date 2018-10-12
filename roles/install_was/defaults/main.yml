@@ -1,11 +1,10 @@
 ---
-was:
-  user: "wbsphere"
-  group: "wbsphere"
-  installation_dir: "/opt/ibm/was"
-  tmp_dir: "/opt/ibm/tmp_was"
-  profile_dir: "/opt/ibm/was/profiles"
-  default_shell: "/bin/sh"
-  response_file_name: "was_response_file.rsp"
-  distrib_name: "was_archive"
+was_user: "wbsphere"
+was_group: "wbsphere"
+was_installation_dir: "/opt/ibm/was"
+was_tmp_dir: "/opt/ibm/tmp_was"
+was_profile_dir: "/opt/ibm/was/profiles"
+was_default_shell: "/bin/sh"
+was_response_file_name: "was_response_file.rsp"
+was_distrib_name: "was_archive"
 ...

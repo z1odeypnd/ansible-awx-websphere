@@ -1,31 +1,31 @@
 ---
-- name: check was.group
+- name: check was_group
   assert:
     that:
-    - was.group is defined and was.group != ''
-    msg: "Set the value of 'was.group' in the inventory file."
+    - was_group is defined and was_group != ''
+    msg: "Set the value of 'was_group' in the inventory file."
     
-- name: check was.user
+- name: check was_user
   assert:
     that:
-    - was.user is defined and was.user != ''
-    msg: "Set the value of 'was.user' in the inventory file."
+    - was_user is defined and was_user != ''
+    msg: "Set the value of 'was_user' in the inventory file."
     
-- name: check was.installation_dir
+- name: check was_installation_dir
   assert:
     that:
-    - was.installation_dir is defined and was.installation_dir != ''
-    msg: "Set the value of 'was.installation_dir' in the inventory file."
+    - was_installation_dir is defined and was_installation_dir != ''
+    msg: "Set the value of 'was_installation_dir' in the inventory file."
     
-- name: check was.tmp_dir
+- name: check was_tmp_dir
   assert:
     that:
-    - was.tmp_dir is defined and was.tmp_dir != ''
-    msg: "Set the value of 'was.tmp_dir' in the inventory file."
+    - was_tmp_dir is defined and was_tmp_dir != ''
+    msg: "Set the value of 'was_tmp_dir' in the inventory file."
     
-- name: check was.profile_dir
+- name: check was_profile_dir
   assert:
     that:
-    - was.profile_dir is defined and was.profile_dir != ''
-    msg: "Set the value of 'was.profile_dir' in the inventory file."
+    - was_profile_dir is defined and was_profile_dir != ''
+    msg: "Set the value of 'was_profile_dir' in the inventory file."
 ...

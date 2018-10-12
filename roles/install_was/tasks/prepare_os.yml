@@ -1,36 +1,36 @@
 ---
 - name: Create WAS group
   group:
-    name: "{{ was.group }}"
+    name: "{{ was_group }}"
 
 - name: Create WAS user
   user:
-    name: "{{ was.user }}"
-    group: "{{ was.group }}"
-    shell: "{{ was.default_shell }}"
+    name: "{{ was_user }}"
+    group: "{{ was_group }}"
+    shell: "{{ was_default_shell }}"
     
-- name: Create instalation dir "{{ was.installation_dir }}"
+- name: Create instalation dir "{{ was_installation_dir }}"
   file:
     state: directory
-    path: "{{ was.installation_dir }}"
+    path: "{{ was_installation_dir }}"
     mode: 0755
-    owner: "{{ was.user }}"
-    group: "{{ was.group }}"
+    owner: "{{ was_user }}"
+    group: "{{ was_group }}"
     
-- name: Cleanup temporary dir "{{ was.tmp_dir }}"
+- name: Cleanup temporary dir "{{ was_tmp_dir }}"
   file:
     state: absent
-    path: "{{ was.tmp_dir }}"
+    path: "{{ was_tmp_dir }}"
     mode: 0755
-    owner: "{{ was.user }}"
-    group: "{{ was.group }}"
+    owner: "{{ was_user }}"
+    group: "{{ was_group }}"
     
-- name: Create temporary dir "{{ was.tmp_dir }}"
+- name: Create temporary dir "{{ was_tmp_dir }}"
   file:
     state: directory
-    path: "{{ was.tmp_dir }}"
+    path: "{{ was_tmp_dir }}"
     mode: 0755
-    owner: "{{ was.user }}"
-    group: "{{ was.group }}"
+    owner: "{{ was_user }}"
+    group: "{{ was_group }}"
     
 ...
