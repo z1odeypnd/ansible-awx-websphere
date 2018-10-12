@@ -1,0 +1,10 @@
+---
+- name: Install WAS services
+  hosts: was
+  become: yes
+  become_user: root
+  roles:
+    - check_vars
+#    - check_envoronment
+#    - install_was
+...

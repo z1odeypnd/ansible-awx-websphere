@@ -1,0 +1,5 @@
+---
+# tasks for check variables
+- name: Check variables
+  include_tasks: check_vars.yml
+...

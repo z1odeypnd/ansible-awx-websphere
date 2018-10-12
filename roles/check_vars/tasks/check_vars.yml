@@ -1,0 +1,19 @@
+---
+- name: check was.group
+  assert:
+    that:
+    - was.group is defined and was.group != ''
+    msg: "Set the value of 'was.group' in the inventory file."
+    
+- name: check was.user
+  assert:
+    that:
+    - was.user is defined and was.user != ''
+    msg: "Set the value of 'was.user' in the inventory file."
+    
+- name: check was.target_dir
+  assert:
+    that:
+    - was.target_dir is defined and was.target_dir != ''
+    msg: "Set the value of 'was.target_dir' in the inventory file."
+...
