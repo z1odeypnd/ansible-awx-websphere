@@ -6,5 +6,5 @@ was_tmp_dir: "/opt/ibm/tmp_was"
 was_profile_dir: "/opt/ibm/was/profiles"
 was_default_shell: "/bin/sh"
 was_response_file_name: "was_response_file.rsp"
-was_distrib_name: "was_archive"
+was_distrib_name: "was_dummy_archive"
 ...
