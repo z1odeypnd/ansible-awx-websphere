@@ -7,4 +7,5 @@ was:
   profile_dir: "/opt/ibm/was/profiles"
   default_shell: "/bin/sh"
   response_file_name: "was_response_file.rsp"
+  distrib_name: "was_archive"
 ...
