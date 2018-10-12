@@ -1,5 +1,5 @@
 ---
 # Prepare OS
 - name: Prepare OS
-  incude_tasks: prepare_os.yml
+  include_tasks: prepare_os.yml
 ...
