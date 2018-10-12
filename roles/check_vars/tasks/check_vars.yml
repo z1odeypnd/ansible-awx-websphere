@@ -11,9 +11,21 @@
     - was.user is defined and was.user != ''
     msg: "Set the value of 'was.user' in the inventory file."
     
-- name: check was.target_dir
+- name: check was.instalation_dir
   assert:
     that:
-    - was.target_dir is defined and was.target_dir != ''
-    msg: "Set the value of 'was.target_dir' in the inventory file."
+    - was.instalation_dir is defined and was.instalation_dir != ''
+    msg: "Set the value of 'was.instalation_dir' in the inventory file."
+    
+- name: check was.tmp_dir
+  assert:
+    that:
+    - was.tmp_dir is defined and was.tmp_dir != ''
+    msg: "Set the value of 'was.tmp_dir' in the inventory file."
+    
+- name: check was.profile_dir
+  assert:
+    that:
+    - was.profile_dir is defined and was.profile_dir != ''
+    msg: "Set the value of 'was.profile_dir' in the inventory file."
 ...

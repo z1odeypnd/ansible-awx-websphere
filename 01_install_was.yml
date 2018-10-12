@@ -6,5 +6,5 @@
   roles:
     - check_vars
 #    - check_envoronment
-#    - install_was
+    - install_was
 ...

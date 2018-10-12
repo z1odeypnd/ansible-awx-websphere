@@ -1,0 +1,7 @@
+---
+- name: Create WAS user
+  user:
+    name: "{{ was.user }}"
+    home: "{{ was.instalation_dir }}"
+    shell: "{{ was.default_shell }}"
+...

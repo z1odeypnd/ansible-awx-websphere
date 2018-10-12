@@ -1,2 +1,5 @@
 ---
-# tasks file for roleawx
+# Prepare OS
+- name: Prepare OS
+  incude_tasks: prepare_os.yml
+...
