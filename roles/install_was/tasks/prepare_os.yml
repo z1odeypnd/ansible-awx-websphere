@@ -1,6 +1,6 @@
 ---
 - name: Create WAS group
-  user:
+  group:
     name: "{{ was.group }}"
 
 - name: Create WAS user
