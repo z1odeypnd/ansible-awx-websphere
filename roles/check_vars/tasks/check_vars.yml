@@ -30,7 +30,7 @@
     msg: "Set the value of 'was_profile_dir' in the inventory file."
     
 - name: Variables is OK
-  command: /bin/true
+  debug:
+    msg: "All variables checked sacessfully."
   register: was_vars_ok
-  ignore_errors: True
 ...
