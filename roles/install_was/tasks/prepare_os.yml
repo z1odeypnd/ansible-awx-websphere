@@ -1,6 +1,11 @@
 ---
+- name: Create WAS group
+  user:
+    name: "{{ was.group }}"
+
 - name: Create WAS user
   user:
     name: "{{ was.user }}"
+    group: "{{ was.group }}"
     shell: "{{ was.default_shell }}"
 ...
