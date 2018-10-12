@@ -32,6 +32,6 @@
 - name: define special variable was_vars_ok
   assert:
     that:
-    - was_vars_ok is not defined
+    - was_vars_ok is defined
     register: was_vars_ok
 ...
