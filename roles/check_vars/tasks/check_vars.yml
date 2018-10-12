@@ -33,5 +33,5 @@
   assert:
     that:
     - was_vars_ok is not defined
-    registry: was_vars_ok
+    register: was_vars_ok
 ...
