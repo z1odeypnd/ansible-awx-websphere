@@ -2,10 +2,4 @@
 # tasks for check variables
 - name: Check variables
   include_tasks: check_vars.yml
-  
-- name: check was.target_dir
-  assert:
-    that:
-    - was.target_dir is defined and was.target_dir != ''
-    msg: "Set the value of 'was.target_dir' in the inventory file."
 ...
