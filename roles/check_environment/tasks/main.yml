@@ -3,4 +3,5 @@
 - name: Debug
   debug:
     msg: "We are here"
+  register: was_environment_ok
 ...

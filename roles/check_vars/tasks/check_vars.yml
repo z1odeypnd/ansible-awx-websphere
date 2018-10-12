@@ -31,6 +31,6 @@
     
 - name: define special variable was_vars_ok
   command: /bin/true
-    register: was_vars_ok
-    ignore_errors: True
+  register: was_vars_ok
+  ignore_errors: True
 ...
