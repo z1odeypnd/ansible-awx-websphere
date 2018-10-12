@@ -2,8 +2,9 @@
 was:
   user: "wbsphere"
   group: "wbsphere"
-  instalation_dir: "/opt/ibm/was"
+  installation_dir: "/opt/ibm/was"
   tmp_dir: "/opt/ibm/tmp_was"
   profile_dir: "/opt/ibm/was/profiles"
   default_shell: "/bin/sh"
+  response_file_name: "was_response_file.rsp"
 ...

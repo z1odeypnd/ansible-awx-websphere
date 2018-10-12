@@ -9,7 +9,7 @@
     group: "{{ was.group }}"
     shell: "{{ was.default_shell }}"
     
-- name: Create instalation dir "{{ was.installation_dir }}"
+- name: Create installation dir "{{ was.installation_dir }}"
   file:
     state: directory
     path: "{{ was.installation_dir }}"
@@ -33,4 +33,13 @@
     owner: "{{ was.user }}"
     group: "{{ was.group }}"
     
+- name: Extract WAS files into "{{ was.tmp_dir }}"
+  unarchive:
+    src: "was_dummy_archive.tar.gz"
+    dest: "{{ was.tmp_dir }}"
+    copy: no
+- name: Generate WAS response file
+  template:
+    src: "was_response_file.j2"
+    dest: "{{ was.tmp_dir }}/{{ was.response_file_name }}"
 ...
