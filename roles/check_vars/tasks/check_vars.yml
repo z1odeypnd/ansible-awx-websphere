@@ -30,8 +30,6 @@
     msg: "Set the value of 'was_profile_dir' in the inventory file."
     
 - name: define special variable was_vars_ok
-  assert:
-    that:
-    - was_vars_ok is defined
+  debug:
     register: was_vars_ok
 ...
