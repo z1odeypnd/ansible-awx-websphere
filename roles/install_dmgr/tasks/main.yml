@@ -1,0 +1,8 @@
+---
+# Prepare OS
+- name: Prepare OS
+  include_tasks: prepare_os.yml
+
+- name: Install dmgr
+  include_tasks: install_dmgr.yml
+...

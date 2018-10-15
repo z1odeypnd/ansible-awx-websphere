@@ -1,4 +1,13 @@
 ---
+- name: Install dmgr server
+  hosts: dmgr
+  become: yes
+  become_user: root
+  roles:
+    - { role: check_vars }
+    - { role: check_environment, when: "was_vars_ok is defined" }
+    - { role: install_dmgr, when: "was_environment_ok is defined" }
+
 - name: Install WAS services
   hosts: was
   become: yes

@@ -1,0 +1,15 @@
+create
+profileName dmgr
+profilePath {{ was_profile_dir }}/dmgr
+hostname server1
+cellName {{ was_cell_name_dmgr }}
+nodeName {{ was_node_name }}
+serverType DEPLOYMENT_MANAGER
+ndtopology false
+enableAdminSecurity false
+dbDesignEnabled true
+dbDelayConfig true
+enableService false
+templatePath {{ was_template_path }}/dmgr.wbiserver
+dbType {{ was_db_dmgr_type }}
+dbJDBCClasspath {{ was_db_jdbc_classpath }}

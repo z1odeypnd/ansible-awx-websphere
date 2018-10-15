@@ -1,0 +1,36 @@
+---
+- name: Create OS group
+  group:
+    name: "{{ was_group_os }}"
+
+- name: Create OS user
+  user:
+    name: "{{ was_user_os }}"
+    group: "{{ was_group_os }}"
+    shell: "{{ was_default_shell }}"
+    
+- name: Create instalation dir "{{ was_installation_dir }}"
+  file:
+    state: directory
+    path: "{{ was_installation_dir }}"
+    mode: 0755
+    owner: "{{ was_user_os }}"
+    group: "{{ was_group_os }}"
+    
+- name: Cleanup temporary dir "{{ was_tmp_dir }}"
+  file:
+    state: absent
+    path: "{{ was_tmp_dir }}"
+    mode: 0755
+    owner: "{{ was_user_os }}"
+    group: "{{ was_group_os }}"
+    
+- name: Create temporary dir "{{ was_tmp_dir }}"
+  file:
+    state: directory
+    path: "{{ was_tmp_dir }}"
+    mode: 0755
+    owner: "{{ was_user_os }}"
+    group: "{{ was_group_os }}"
+    
+...

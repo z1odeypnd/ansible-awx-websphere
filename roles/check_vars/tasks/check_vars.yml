@@ -1,15 +1,45 @@
 ---
-- name: check was_group
+- name: check was_user_os
   assert:
     that:
-    - was_group is defined and was_group != ''
-    msg: "Set the value of 'was_group' in the inventory file."
+    - was_user_os is defined and was_user_os != ''
+    msg: "Set the value of 'was_user_os' in the inventory file."
     
-- name: check was_user
+- name: check was_group_os
   assert:
     that:
-    - was_user is defined and was_user != ''
-    msg: "Set the value of 'was_user' in the inventory file."
+    - was_group_os is defined and was_group_os != ''
+    msg: "Set the value of 'was_group_os' in the inventory file."
+    
+- name: check was_root_path
+  assert:
+    that:
+    - was_root_path is defined and was_root_path != ''
+    msg: "Set the value of 'was_root_path' in the inventory file."
+    
+- name: check was_user_dmgr
+  assert:
+    that:
+    - was_user_dmgr is defined and was_user_dmgr != ''
+    msg: "Set the value of 'was_user_dmgr' in the inventory file."
+    
+- name: check was_password_dmgr
+  assert:
+    that:
+    - was_password_dmgr is defined and was_password_dmgr != ''
+    msg: "Set the value of 'was_password_dmgr' in the inventory file."
+    
+- name: check was_cell_name_dmgr
+  assert:
+    that:
+    - was_cell_name_dmgr is defined and was_cell_name_dmgr != ''
+    msg: "Set the value of 'was_cell_name_dmgr' in the inventory file."
+    
+- name: check was_node_name
+  assert:
+    that:
+    - was_node_name is defined and was_node_name != ''
+    msg: "Set the value of 'was_node_name' in the inventory file."
     
 - name: check was_installation_dir
   assert:
@@ -17,17 +47,11 @@
     - was_installation_dir is defined and was_installation_dir != ''
     msg: "Set the value of 'was_installation_dir' in the inventory file."
     
-- name: check was_tmp_dir
+- name: check was_template_path
   assert:
     that:
-    - was_tmp_dir is defined and was_tmp_dir != ''
-    msg: "Set the value of 'was_tmp_dir' in the inventory file."
-    
-- name: check was_profile_dir
-  assert:
-    that:
-    - was_profile_dir is defined and was_profile_dir != ''
-    msg: "Set the value of 'was_profile_dir' in the inventory file."
+    - was_template_path is defined and was_template_path != ''
+    msg: "Set the value of 'was_template_path' in the inventory file."
     
 - name: Variables is OK
   debug:
