@@ -1,12 +1,13 @@
 ---
-- name: Extract WAS files into "{{ was_tmp_dir }}"
+- name: Extract files into "{{ was_tmp_dir }}"
   unarchive:
-    src: "{{ lookup('fileglob', './files/{{ was_distrib_name }}*.tar.gz') }}"
+    src: "{{ lookup('fileglob', './files/{{ item }}*.tar.gz') }}"
     dest: "{{ was_tmp_dir }}/"
-#    copy: no
+    with_items:
+      - "{{ was_distrib_name }}"
     
-- name: Generate WAS response file
+- name: Generate response file
   template:
-    src: "was_response_file.j2"
+    src: "was_response.j2"
     dest: "{{ was_tmp_dir }}/{{ was_response_file_name }}"
 ...

@@ -4,7 +4,7 @@
     src: "{{ lookup('fileglob', './files/{{ item }}*.tar.gz') }}"
     dest: "{{ was_tmp_dir }}/"
     with_items:
-        - {{ was_distrib_name }}
+      - "{{ was_distrib_name }}"
     
 - name: Generate response file
   template:

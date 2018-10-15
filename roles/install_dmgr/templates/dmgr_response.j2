@@ -1,9 +1,9 @@
 create
-profileName dmgr
-profilePath {{ was_profile_dir }}/dmgr
-hostname server1
+profileName {{ was_profile_name_dmgr }}
+profilePath {{ was_profiles_dir }}/{{ was_profile_name_dmgr }}
+hostname server{{ host_number }}
 cellName {{ was_cell_name_dmgr }}
-nodeName {{ was_node_name }}
+nodeName {{ was_node_name_dmgr }}
 serverType DEPLOYMENT_MANAGER
 ndtopology false
 enableAdminSecurity false
@@ -11,5 +11,5 @@ dbDesignEnabled true
 dbDelayConfig true
 enableService false
 templatePath {{ was_template_path }}/dmgr.wbiserver
-dbType {{ was_db_dmgr_type }}
+dbType {{ was_db_type }}
 dbJDBCClasspath {{ was_db_jdbc_classpath }}
