@@ -3,7 +3,7 @@
   unarchive:
     src: "{{ lookup('fileglob', './files/{{ item }}*.tar.gz') }}"
     dest: "{{ was_tmp_dir }}/"
-    with_items:
+    loop:
       - "{{ was_distrib_name }}"
     
 - name: Generate response file
