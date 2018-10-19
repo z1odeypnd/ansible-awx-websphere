@@ -35,11 +35,11 @@
     - was_cell_name_dmgr is defined and was_cell_name_dmgr != ''
     msg: "Set the value of 'was_cell_name_dmgr' in the inventory file."
     
-- name: check was_node_name
+- name: check was_node_name_dmgr
   assert:
     that:
-    - was_node_name is defined and was_node_name != ''
-    msg: "Set the value of 'was_node_name' in the inventory file."
+    - was_node_name_dmgr is defined and was_node_name_dmgr != ''
+    msg: "Set the value of 'was_node_name_dmgr' in the inventory file."
     
 - name: check was_installation_dir
   assert:
